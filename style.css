@@ -1,0 +1,22 @@
+.container>h1{
+    background-color: rgba(137, 43, 226, 0.514);
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1vmin;
+    width: min-content;
+    margin: auto;
+    border: 2px solid black;
+    padding:5px;
+    background-color: rgb(248, 206, 239);
+}
+
+.position {
+    width: 5vmin;
+    height: 5vmin;
+    
+    background: white;
+    border: 1px solid black;
+}
