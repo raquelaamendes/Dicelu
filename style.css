@@ -1,16 +1,9 @@
-.container>h1{
-    background-color: rgba(137, 43, 226, 0.514);
+.container{
+    padding:1vmax;
 }
 
-.game {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 1vmin;
-    width: min-content;
-    margin: auto;
-    border: 2px solid black;
-    padding:5px;
-    background-color: rgb(248, 206, 239);
+.container>h1{
+    background-color: rgba(137, 43, 226, 0.514);
 }
 
 .position {
@@ -19,4 +12,15 @@
     
     background: white;
     border: 1px solid black;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1vmin;
+    width: min-content;
+    margin: auto;
+    border: 2px solid black;
+    padding:5px;
+    background-color: rgb(248, 206, 239);
 }
