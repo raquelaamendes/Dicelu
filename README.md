@@ -1,5 +1,6 @@
 # Dicelu
 Just a silly simple browser game
 
-AUTHOR: Raquel Mendes
-STATUS: The project is under active development.
+STATUS: The project is under active development.<br>
+AUTHOR: Raquel Mendes<br>
+
