@@ -24,3 +24,19 @@
     padding:5px;
     background-color: rgb(248, 206, 239);
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-media-list {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+}
+
+.social-media-list li {
+    display: inline-block; /* Exibe os itens da lista em linha */
+    margin-right: 10px; /* Adiciona um espaçamento à direita entre os itens da lista */
+}
