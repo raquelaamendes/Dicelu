@@ -32,11 +32,11 @@ footer {
 }
 
 .social-media-list {
-    list-style: none; /* Remove os marcadores padrão da lista */
-    padding: 0; /* Remove o preenchimento padrão da lista */
+    list-style: none; 
+    padding: 0; 
 }
 
 .social-media-list li {
-    display: inline-block; /* Exibe os itens da lista em linha */
-    margin-right: 10px; /* Adiciona um espaçamento à direita entre os itens da lista */
+    display: inline-block;
+    margin-right: 10px;
 }
