@@ -29,14 +29,19 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    padding: 0.5rem;
 }
 
-.social-media-list {
-    list-style: none; 
-    padding: 0; 
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.5rem;
 }
 
-.social-media-list li {
-    display: inline-block;
-    margin-right: 10px;
-}
+.social-media-list li i {
+    margin-left: 10px;
+    font-size: 20px;
+    color:rgb(169, 114, 221);
+  }
