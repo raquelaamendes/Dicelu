@@ -25,3 +25,5 @@ for (let i = 0; i < rows; i++) {
         grid[i][j] = cell;
     }
 }
+
+// Game Functionality
