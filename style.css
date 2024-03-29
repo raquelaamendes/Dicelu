@@ -14,6 +14,7 @@
     --bs-btn-hover-bg: rgb(248, 206, 239);
     --bs-btn-hover-border-color: purple;
     --bs-btn-active-bg: purple;
+    margin-bottom: 5rem;
     
 }
 
@@ -25,15 +26,28 @@
     border: 1px solid black;
 }
 
+@media (max-width: 800px) {
+    .position {
+        width: 8vmin; 
+        height: 8vmin; 
+    }
+}
+
 #grid-container{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 1vmin;
-    width: min-content;
+    width: max-content;
     margin: auto;
     border: 2px solid black;
     padding:5px;
     background-color: rgb(248, 206, 239);
+}
+
+@media (max-width: 576px) {
+    #grid-container {
+        justify-self: center;
+    }
 }
 
 footer {
@@ -41,6 +55,7 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 0.5rem;
+    margin-top: 2rem;
 }
 
 .footer-content{
@@ -56,4 +71,19 @@ footer {
     font-size: 20px;
     color:rgb(169, 114, 221);
   }
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+
+
+footer {
+    margin-top: 2rem; 
+}
 
