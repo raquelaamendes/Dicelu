@@ -11,14 +11,11 @@ for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
         
         const cell = document.createElement('div');
-        cell.classList.add('cell');
+        cell.classList.add('position');
         
        
         const cellId = `cell-${i}-${j}`;
         cell.setAttribute('id', cellId);
-
-        const cellClass = `position`;
-        cell.setAttribute('class', cellClass);
         
         
         gridContainer.appendChild(cell);
@@ -27,3 +24,10 @@ for (let i = 0; i < rows; i++) {
 }
 
 // Game Functionality
+
+function Startgame(){
+    //Remove Start the game button to show other buttons
+    const buttonstart = document.getElementById('btn-startgame');
+    buttonstart.remove();
+
+}
