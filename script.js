@@ -30,4 +30,22 @@ function Startgame(){
     const buttonstart = document.getElementById('btn-startgame');
     buttonstart.remove();
 
+    //Create buttons Dice Roll and Reset
+    const buttonDiceRoll = document.createElement('button');
+    const buttonReset = document.createElement('button');
+
+    buttonDiceRoll.setAttribute('type', 'button');
+    buttonReset.setAttribute('type', 'button');
+    
+    buttonDiceRoll.classList.add("btn", "btn-primary", "rounded-0", "btn-margin-right");
+    buttonReset.classList.add("btn", "btn-primary", "rounded-0", "btn-margin-left");
+
+    buttonDiceRoll.textContent = 'Roll the dice';
+    buttonReset.textContent = 'Reset';
+
+    const divButtons = document.getElementById('div-buttons');
+    divButtons.appendChild(buttonDiceRoll);
+    divButtons.appendChild(buttonReset);
+
+
 }

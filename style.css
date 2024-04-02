@@ -18,6 +18,14 @@
     
 }
 
+.btn-margin-right{
+    margin-right: 1rem;
+}
+
+.btn-margin-left{
+    margin-right: 1rem;
+}
+
 .position {
     width: 5vmin;
     height: 5vmin;
