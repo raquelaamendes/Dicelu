@@ -1,6 +1,7 @@
 const rows = 10;
 const cols = 10;
 const grid = [];
+const dice = 0;
 
 const gridContainer = document.getElementById('grid-container');
 
@@ -36,6 +37,7 @@ function Startgame(){
 
     buttonDiceRoll.setAttribute('type', 'button');
     buttonReset.setAttribute('type', 'button');
+    buttonDiceRoll.setAttribute('onclick', 'rolldice()');
     
     buttonDiceRoll.classList.add("btn", "btn-primary", "rounded-0", "btn-margin-right");
     buttonReset.classList.add("btn", "btn-primary", "rounded-0", "btn-margin-left");
@@ -48,4 +50,9 @@ function Startgame(){
     divButtons.appendChild(buttonReset);
 
 
+}
+
+function rolldice(){
+    const dice = Math.trunc((Math.random() * (13 - 1) + 1));
+    console.log("Dice " + dice);
 }
