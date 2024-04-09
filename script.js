@@ -38,6 +38,7 @@ function Startgame(){
     buttonDiceRoll.setAttribute('type', 'button');
     buttonReset.setAttribute('type', 'button');
     buttonDiceRoll.setAttribute('onclick', 'rolldice()');
+    buttonReset.setAttribute('onclick', 'reset()');
     
     buttonDiceRoll.classList.add("btn", "btn-primary", "rounded-0", "btn-margin-right");
     buttonReset.classList.add("btn", "btn-primary", "rounded-0", "btn-margin-left");
@@ -55,4 +56,10 @@ function Startgame(){
 function rolldice(){
     const dice = Math.trunc((Math.random() * (13 - 1) + 1));
     console.log("Dice " + dice);
+
+
+}
+
+function reset(){
+    location.reload();
 }
