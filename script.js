@@ -2,6 +2,9 @@ const rows = 10;
 const cols = 10;
 const grid = [];
 const dice = 0;
+let timesDice = 0;
+let currentRow = 9;
+let currentCol = 0;
 
 const gridContainer = document.getElementById('grid-container');
 
@@ -53,9 +56,35 @@ function Startgame(){
 
 }
 
+function FillCell(dice, grid){
+
+    for(let i = 0; i < dice; i++){
+        
+        const currentCellId = document.getElementById(`cell-${currentRow}-${currentCol}`);
+        currentCellId.classList.replace("position" , "currentPosition");
+        
+        if(currentCol+1 > 9){
+            currentRow--;
+            currentCol = 0;
+        }else{
+            currentCol++;
+        }
+
+        
+    }
+}
+
 function rolldice(){
-    const dice = Math.trunc((Math.random() * (13 - 1) + 1));
+    const dice = Math.trunc((Math.random() * (7 - 1) + 1));
     console.log("Dice " + dice);
+    FillCell(dice, grid);
+    timesDice++;
+
+    if(timesDice == 3){
+        //Function for jail
+        timesDice = 0;
+        
+    }
 
 
 }

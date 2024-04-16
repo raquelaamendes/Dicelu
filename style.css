@@ -34,6 +34,14 @@
     border: 1px solid black;
 }
 
+.currentPosition {
+    width: 5vmin;
+    height: 5vmin;
+    
+    background: grey;
+    border: 1px solid black;
+}
+
 @media (max-width: 800px) {
     .position {
         width: 8vmin; 
