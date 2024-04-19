@@ -5,6 +5,7 @@ const dice = 0;
 let timesDice = 0;
 let currentRow = 9;
 let currentCol = 0;
+let blockedRow = 9;
 
 const gridContainer = document.getElementById('grid-container');
 
@@ -74,6 +75,17 @@ function FillCell(dice, grid){
     }
 }
 
+function jail(grid){
+    console.log("JAIL!");
+    
+    for(let i = 0; i < 10; i++){
+        const currentCellId = document.getElementById(`cell-${blockedRow}-${i}`);
+        currentCellId.classList.add("blockedPosition");
+    }
+
+    blockedRow--;
+}
+
 function rolldice(){
     const dice = Math.trunc((Math.random() * (7 - 1) + 1));
     console.log("Dice " + dice);
@@ -82,6 +94,7 @@ function rolldice(){
 
     if(timesDice == 3){
         //Function for jail
+        jail(grid);
         timesDice = 0;
         
     }

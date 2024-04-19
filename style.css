@@ -42,6 +42,10 @@
     border: 1px solid black;
 }
 
+.blockedPosition {
+    background: black;
+}
+
 @media (max-width: 800px) {
     .position {
         width: 8vmin; 
