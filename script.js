@@ -2,6 +2,7 @@ const rows = 10;
 const cols = 10;
 const grid = [];
 const dice = 0;
+let totalCellsPlayed = 0;
 let timesDice = 0;
 let currentRow = 9;
 let currentCol = 0;
@@ -38,6 +39,9 @@ function Startgame(){
     //Create buttons Dice Roll and Reset
     const buttonDiceRoll = document.createElement('button');
     const buttonReset = document.createElement('button');
+
+    buttonDiceRoll.id = "btn_diceRoll";
+    buttonReset.id = "btn_Reset";
 
     buttonDiceRoll.setAttribute('type', 'button');
     buttonReset.setAttribute('type', 'button');
@@ -76,7 +80,7 @@ function FillCell(dice, grid){
 }
 
 function jail(grid){
-    console.log("JAIL!");
+    console.log("Line blocked!");
     
     for(let i = 0; i < 10; i++){
         const currentCellId = document.getElementById(`cell-${blockedRow}-${i}`);
@@ -86,16 +90,41 @@ function jail(grid){
     blockedRow--;
 }
 
+function gameOver(){
+
+    if(currentRow == blockedRow+1){
+        document.getElementById("btn_diceRoll").disabled = true;
+        console.log("O jogador perdeu o jogo!");
+
+    }
+}
+
+function wonGame(){
+    
+    const maxCells = rows * cols;
+
+    if(totalCellsPlayed >= maxCells){
+        document.getElementById("btn_diceRoll").disabled = true;
+        console.log("Parabéns! Ganhou o jogo!");
+    }
+
+}
+
 function rolldice(){
     const dice = Math.trunc((Math.random() * (7 - 1) + 1));
     console.log("Dice " + dice);
     FillCell(dice, grid);
     timesDice++;
+    totalCellsPlayed += dice;
+
+    wonGame();
 
     if(timesDice == 3){
         //Function for jail
         jail(grid);
         timesDice = 0;
+        //Game over function
+        gameOver();
         
     }
 
