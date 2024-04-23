@@ -7,6 +7,7 @@ let timesDice = 0;
 let currentRow = 9;
 let currentCol = 0;
 let blockedRow = 9;
+let numBlockedRows=0;
 
 const gridContainer = document.getElementById('grid-container');
 
@@ -66,6 +67,11 @@ function FillCell(dice, grid){
     for(let i = 0; i < dice; i++){
         
         const currentCellId = document.getElementById(`cell-${currentRow}-${currentCol}`);
+
+        if(currentCellId == null){
+            break;
+        }
+
         currentCellId.classList.replace("position" , "currentPosition");
         
         if(currentCol+1 > 9){
@@ -87,25 +93,29 @@ function jail(grid){
         currentCellId.classList.add("blockedPosition");
     }
 
+    numBlockedRows++;
     blockedRow--;
 }
 
 function gameOver(){
+    
+    let lost = 0;
 
-    if(currentRow == blockedRow+1){
+    if(totalCellsPlayed <= numBlockedRows*cols){
         document.getElementById("btn_diceRoll").disabled = true;
-        console.log("O jogador perdeu o jogo!");
-
+        console.log("O jogador perdeu o jogo!"); 
     }
+
+    
 }
 
 function wonGame(){
     
-    const maxCells = rows * cols;
-
-    if(totalCellsPlayed >= maxCells){
+    console.log("totalCasasjogadas = " + totalCellsPlayed + "\nTotalCells = " + rows*cols);
+    console.log("Entrou no ganhou o jogo para verificar.");
+    if(totalCellsPlayed >= rows*cols){
+        console.log("O jogador ganhou o jogo! PARABENS");
         document.getElementById("btn_diceRoll").disabled = true;
-        console.log("Parabéns! Ganhou o jogo!");
     }
 
 }
