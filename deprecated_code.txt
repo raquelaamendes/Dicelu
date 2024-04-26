@@ -1,0 +1,23 @@
+// GAME OVER FUNCTION CODE - NOT FULL WORKING
+
+    //console.log("A linha atual e " + currentRow);
+    //console.log("A coluna atual e " + currentCol);
+    //QUANDO O JOGADOR ESTÁ NA PRIMEIRA CELL DA LINHA E A CELULA ANTERIOR FICOU PRETA, DEVIA PERDER O JOGO!
+    
+    // if(currentCol == 0 && currentRow < (rows-1)){
+    //     console.log("ENTROU NO DEVIA BLOQUEAR.")
+    //     const currentCell = document.getElementById(`cell-${currentRow}-${currentCol}`);
+    //     const cellBefore = document.getElementById(`cell-${currentRow+1}-${cols-1}`);
+
+    //     if(currentCell.style.background == "white" && cellBefore.style.background == "black"){
+    //         document.getElementById("btn_diceRoll").disabled = true;
+    //         console.log("O jogador perdeu o jogo!"); 
+    //     }
+    // }
+
+
+    // if(currentRow == blockedRow+1){
+    //     document.getElementById("btn_diceRoll").disabled = true;
+    //     console.log("O jogador perdeu o jogo!");
+
+    // }
