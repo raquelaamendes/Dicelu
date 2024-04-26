@@ -103,7 +103,11 @@ function gameOver(){
 
     if(totalCellsPlayed <= numBlockedRows*cols){
         document.getElementById("btn_diceRoll").disabled = true;
+        document.getElementById("btn_Reset").disabled = true;
         console.log("O jogador perdeu o jogo!"); 
+        
+        var myModal = new bootstrap.Modal(document.getElementById("gameOverModal"));
+        myModal.show();
     }
 
     
@@ -116,6 +120,15 @@ function wonGame(){
     if(totalCellsPlayed >= rows*cols){
         console.log("O jogador ganhou o jogo! PARABENS");
         document.getElementById("btn_diceRoll").disabled = true;
+        document.getElementById("btn_Reset").disabled = true;
+
+        document.getElementById("modalTitle").textContent = "Congratulations!";
+        document.getElementById("modalText").textContent = "You just won this silly game.";
+
+        var myModal = new bootstrap.Modal(document.getElementById("gameOverModal"));
+        myModal.show();
+
+
     }
 
 }
@@ -141,6 +154,14 @@ function rolldice(){
 
 }
 
+function restartGame(){
+    var modal = document.getElementById('gameOverModal');
+    modal.classList.remove('show');
+    modal.style.display = 'none';
+    location.reload();
+}
+
 function reset(){
     location.reload();
 }
+

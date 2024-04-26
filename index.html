@@ -14,7 +14,7 @@
     
     <div class="container mt-3 mb-2 bg-light text-black">
         <h1>Dicelu</h1>
-        <p>This is a luck base game!</p>
+        <p>This is a luck based game!</p>
     </div>
 
     <div  class="align-middle">
@@ -23,6 +23,22 @@
 
     <div class="container align-items-center justify-content-center text-center p-2 mt-3" id="div-buttons">
         <button type="button" class="btn btn-primary rounded-0" id="btn-startgame" onclick="Startgame()">Start the game</button>
+    </div>
+
+    <div class="modal fade" id="gameOverModal" tabindex="-1" role="dialog" aria-labelledby="gameOverModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Game Over!</h5>                    
+                </div>
+                <div class="modal-body">
+                    <p id="modalText">Sorry, you lost the game. Try again!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-modal rounded-0" onclick="restartGame()">Play again!</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -37,7 +53,7 @@
             
             <ul class="social-media-list list-unstyled d-flex mb-0">  
                 <li>
-                    <a href="https://www.instagram.com/indexyra_" target="_blank"><i class="bi bi-instagram"></i>
+                    <a href="https://www.instagram.com/cristalang3l" target="_blank"><i class="bi bi-instagram"></i>
                     </a>
                 </li>
                 <li>
@@ -53,5 +69,6 @@
         </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </html>
