@@ -52,8 +52,8 @@ function Startgame(){
     buttonDiceRoll.classList.add("btn", "btn-primary", "rounded-0", "btn-margin-right");
     buttonReset.classList.add("btn", "btn-primary", "rounded-0", "btn-margin-left");
 
-    buttonDiceRoll.textContent = 'Roll the dice';
-    buttonReset.textContent = 'Reset';
+    buttonDiceRoll.innerHTML = 'Roll the dice';
+    buttonReset.innerHTML = 'Reset';
 
     const divButtons = document.getElementById('div-buttons');
     divButtons.appendChild(buttonDiceRoll);
@@ -122,8 +122,8 @@ function wonGame(){
         document.getElementById("btn_diceRoll").disabled = true;
         document.getElementById("btn_Reset").disabled = true;
 
-        document.getElementById("modalTitle").textContent = "Congratulations!";
-        document.getElementById("modalText").textContent = "You just won this silly game.";
+        document.getElementById("modalTitle").innerHTML = "Congratulations! &#127882";
+        document.getElementById("modalText").innerHTML = "You just won this silly game.";
 
         var myModal = new bootstrap.Modal(document.getElementById("gameOverModal"));
         myModal.show();
@@ -131,6 +131,21 @@ function wonGame(){
 
     }
 
+}
+
+var continueModal = new bootstrap.Modal(document.getElementById("continueGame"));
+
+function Continue(){
+    continueModal.show();
+}
+
+function blockline(){
+    continueModal.hide();
+    document.getElementById("btn_diceRoll").disabled = false;
+    document.getElementById("btn_Reset").disabled = false;
+    jail(grid);
+    timesDice = 0;
+    gameOver();
 }
 
 function rolldice(){
@@ -143,16 +158,12 @@ function rolldice(){
     wonGame();
 
     if(timesDice == 3){
-        //Function for jail
-        jail(grid);
-        timesDice = 0;
-        //Game over function
-        gameOver();
+        Continue();
         
     }
 
-
 }
+
 
 function restartGame(){
     var modal = document.getElementById('gameOverModal');
